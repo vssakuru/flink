@@ -273,7 +273,7 @@ class PythonEnvUtilsTest {
         assertThat(result.contains("NORMAL_VAR=safe-value")).isTrue();
 
         // Ensure no sensitive values are leaked
-        assertThat(result.contains("secret123").isFalse();
+        assertThat(result.contains("secret123")).isFalse();
         assertThat(result.contains("token456")).isFalse();
         assertThat(result.contains("pass789")).isFalse();
         assertThat(result.contains("keyABC")).isFalse();

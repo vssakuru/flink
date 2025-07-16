@@ -543,12 +543,9 @@ final class PythonEnvUtils {
     }
 
     /**
-     * Redacts values of sensitive environment variables before logging. Keys containing patterns
-     * such as SECRET, TOKEN, PASSWORD, or KEY (case-insensitive) will have their values replaced
-     * with "***REDACTED***".
-     *
-     * @param environment a map of environment variables
-     * @return a string of key=value pairs with sensitive values redacted
+     * Redacts values of sensitive environment variables before logging.
+     * Keys containing patterns such as SECRET, TOKEN, PASSWORD, or KEY (case-insensitive)
+     * will have their values replaced with "***REDACTED***".
      */
     public static String redactEnv(Map<String, String> environment) {
         return environment.entrySet().stream()
